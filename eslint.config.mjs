@@ -31,6 +31,7 @@ export default antfu({
     'symbol-description': 'warn',
     'no-unused-vars': 'warn',
     'unused-imports/no-unused-imports': 'error', // 禁止未使用的导入
+    "test/consistent-test-it": ["error", { "withinDescribe": "test" }]
   },
   formatters: {
     css: true,

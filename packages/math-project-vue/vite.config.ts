@@ -6,6 +6,9 @@ import { defineConfig } from 'vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  test: {
+    environment: "jsdom",
+  },
   plugins: [
     vue(),
     UnoCSS(),
@@ -20,6 +23,7 @@ export default defineConfig({
   resolve: {
     alias: { '@': '/src' },
   },
+  
   server: {
     open: true,
     proxy: {
