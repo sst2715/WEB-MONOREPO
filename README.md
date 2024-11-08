@@ -6,7 +6,6 @@
 
 <p align="center">基于 Vite 栈的前端工程化实践</p>
 <p align="center">
-  <img src="https://img.shields.io/github/license/sst2715/ssy-ui-vite">
   <a href="https://codecov.io/github/sst2715/ssy-ui-vite">
     <img src="https://codecov.io/github/sst2715/ssy-ui-vite/graph/badge.svg?token=ZSOINJLQH6" alt="codecov">
   </a>
