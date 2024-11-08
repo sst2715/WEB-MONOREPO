@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "ES2023",
+    "baseUrl": "./",
+    "module": "ESNext",
+    "moduleResolution": "Node", // 指定TypeScript如何从给定的模块说明符中查找文件
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "allowJs": true, // 指定源目录的 JavaScript 文件是否原样拷贝到编译后的目录
+    "strict": true,
+    "noEmit": true, // 不生成输出文件
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true, // 将每个文件作为单独的模块
+    "skipLibCheck": true
+  },
+  "ts-node": {
+    "esm": true,
+    "experimentalSpecifierResolution": "node"
+  },
+  "include": ["./src/**/*"]
+}

@@ -1,4 +1,3 @@
-import Apifox from '@/components/Apifox.vue'
 import ColorTheme from '@/pages/ColorTheme.vue'
 import HomeView from '@/pages/HomeView.vue'
 import I18nView from '@/pages/I18nView.vue'
@@ -10,9 +9,7 @@ const routes = [
   { name: 'mock', path: '/mock', component: MockView },
   { path: '/theme', component: ColorTheme },
   { path: '/i18n', component: I18nView },
-  { path: '/apifox', component: Apifox },
 ]
-
 
 const router = createRouter({
   history: createWebHistory(),

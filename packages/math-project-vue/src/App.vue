@@ -2,15 +2,32 @@
 import { Person } from '@w4ng3/tools'
 import dayjs from 'dayjs'
 import { onMounted } from 'vue'
+import { showMsg } from './components/MessageBox'
 import { useDark } from './composables/useDark'
 
-const person = new Person('sst', 'React')
+const person = new Person('sst2715', 'React')
 
 const { enableDarkMode, disableDarkMode, applySavedTheme } = useDark()
 
 onMounted(() => {
   applySavedTheme()
 })
+
+
+function openAleart() {
+  showMsg({
+    title: '标题',
+    content: '1234567',
+    closeable: true,
+    showCancle: true,
+    onCancel: () => {
+      console.log('Cancle :>>')
+    },
+    onConfirm: () => {
+      console.log('Confirm :>>')
+    },
+  })
+}
 </script>
 
 <template>
@@ -30,6 +47,9 @@ onMounted(() => {
       <button class="bg-black text-white btn" @click="enableDarkMode">
         <div i-carbon-asleep />
       </button>
+      <button class="bg-red text-white btn" @click="openAleart">
+        aleart
+      </button>
     </div>
     <!-- 路由匹配到的组件将渲染在这里 -->
     <main class="m-2 h-70vh overflow-y-scroll rounded-xl bg-truegray-200 p-2 dark:bg-purple-300">
@@ -45,9 +65,6 @@ onMounted(() => {
         </RouterLink>
         <RouterLink to="/mock">
           以赝顶真
-        </RouterLink>
-        <RouterLink to="/apifox">
-          apifox
         </RouterLink>
         <RouterLink to="/i18n">
           睁眼看世界
