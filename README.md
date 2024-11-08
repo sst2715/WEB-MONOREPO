@@ -1,42 +1,35 @@
-# web 前端系统开发
+<p align="center">
+  <img src="./assets/github.svg" alt="Logo" width="150"/>
+</p>
 
-- monorepo
+<h1 align="center">SSY-UI-VITE</h1>
 
-```bash
-pnpm i
-```
+<p align="center">基于 Vite 栈的前端工程化实践</p>
+<p align="center">
+  <img src="https://img.shields.io/github/license/sst2715/ssy-ui-vite">
+  <a href="https://codecov.io/github/sst2715/ssy-ui-vite">
+    <img src="https://codecov.io/github/sst2715/ssy-ui-vite/graph/badge.svg?token=ZSOINJLQH6" alt="codecov">
+  </a>
+</p>
 
-change
+## Features
+- 基于 **Vue** 框架
+- 支持 **JSX** 与 **Vue 单文件组件**
+- 使用 **Vitest** 和 **Vue3 插件** 实现单元测试
+- 集成 **Eslint**、**Prettier** 和 **Husky** 进行代码语法检查
+- 采用 **Rollup** 进行构建
+- 使用 **Vitepress** 搭建文档网站并部署到 **Vercel**
+- 配合 **GitHub Actions** 实现持续集成与交付
 
-## 开发环境
+## Quick start
+```javascript
+import SSYUI from 'ssy-ui'
+import { createApp } from 'vue'
 
-- Node.js Version `>= 18.12`
-- 包管理工具：`pnpm`, Version `>= 9.5`
-- 代码编辑器：`VSCode`
-- 版本管理工具: `git`
-- npm 源管理器：`nrm`
+const App = {
+  template: '<SButton color="blue">主要按钮</SButton>'
+}
 
-  - [node.js - nrm —— 快速切换 NPM 源 （附带测速功能） - SegmentFault 行业快讯 - SegmentFault 思否](https://segmentfault.com/a/1190000000473869)
-
-- node 版本管理：`nvm`
-  - [mac 和 windows 上安装 nvm 管理 node 版本-阿里云开发者社区 (aliyun.com)](https://developer.aliyun.com/article/1592906)
-
-### VSCode 配置参考
-
-> 可以参考我的主题和插件
-
-我将我的配置文件导出到了[.vscode/web.code-profile](./.vscode/web.code-profile)
-
-点击 VSCode 左下角图标，找到导入配置文件，选择文件`web.code-profile`,创建配置文件，稍等一会儿安装好插件后会自动切换配置，也可手动切换。
-
-<img src="https://cdn.jsdelivr.net/gh/w4ng3/wiki-image@main/img/image-20240906160227431.png" width="250" />
-
-### 网络代理推荐
-
-自己挑一个用
-
-- https://ikuuu.pw/
-
-- https://hello-ssone.com/   (推荐💪)
-
-- https://fengqun.io/
+createApp(App)
+  .use(SSYUI)
+  .mount('#app')
